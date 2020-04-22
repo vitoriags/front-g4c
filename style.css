@@ -11,29 +11,25 @@ html, body{
 
 .body-login{
     color: #fff;
-    background-image: linear-gradient(-25deg, #52affe, #46fc7c);
+    background-image: linear-gradient(-25deg, #00ff66, #61f89d, #7cfdc5);
+    width: 100%;
+    height: 100%;
     position: relative;
-    padding-right: 10%;
-    padding-bottom: 149px;
     background-size: 400% 400%;
     animation: change 10s ease-in-out infinite;
     display: flex;
-    width: 90%;
-    height: 77%;
-
 }
 
 .body-signup{
     color: #fff;
-    background-image: linear-gradient(-25deg, #b63b29, #fd7e1d, #fcfa45);
+    background-image: linear-gradient(-25deg, #ff79f8, #fcafff, #ffbde0);
+    width: 100%;
+    height: 100%;
     position: relative;
-    padding-right: 10%;
-    padding-bottom: 149px;
     background-size: 400% 400%;
     animation: change 10s ease-in-out infinite;
     display: flex;
-    width: 90%;
-    height: 77%;
+    justify-content: center;
 }
 
 @keyframes change{
@@ -56,6 +52,15 @@ html, body{
     overflow: hidden;
     position: relative;
     opacity: 80%;
+}
+
+.img-rainbow img{
+    margin-top: 4%;
+    width: 1300px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    opacity: 90%;
 }
 
 .imagecomp{
@@ -208,23 +213,22 @@ html, body{
 }
 
 .loginregister{
-    display: flex;
     font-family: 'Pathway Gothic One', sans-serif;
     color: white;
     padding: 10px;
     font-size: 11px;
-    height: 120px;
+    display: flex;
     justify-content: space-between;
 }
 
-.loginregister .signuplogin{
+.loginregister a{
     text-decoration: none;
     font-family: 'Pathway Gothic One', sans-serif;
     color: rgb(13, 104, 104);
     font-size: 11px;
 }
 
-.loginregister .signuplogin:hover{
+.loginregister a:hover{
     border-bottom: 1px solid rgb(13, 104, 104);
 }
 
@@ -290,60 +294,150 @@ a{
     color: white;
 }
 
-.signinredes img{
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    margin-left: 5px;
-    opacity: 60%;
-    transform: scale(1.0);
-}
-
-.signinredes img:hover{
-    opacity: 100%;
-    transform: scale(1.2);
-}
-
 /* signup-style */
 
 .firstbox-signup{
     margin-top: 120px;
-    margin-left: 210px;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 850px;
-    height: 380px;
+    width: 800px;
+    height: 400px;
     border-radius: 8px;
     background: rgba(252, 246, 246, 0.164);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-between;
     color: rgb(34, 33, 33);
-    text-align: center;
     font-family: 'Pathway Gothic One', sans-serif;
     color: white;
     position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.datas-box {
-    background-color: turquoise;
+.sec-box-signup{
+    width: 820px;
+    height: 350px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+
+}
+
+.datas-box-1 {
     margin-top: 0px;
     padding: 10px;
     width: 420px;
     height: 320px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.space{
+    width: 205px;
+    height: 310px;
+    display: flex;
+    align-items: flex-end;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.sec-box-signup{
-    background-color: #46fc7c;
-    width: 840px;
+.space-names{
+    width: 130px;
+    height: 310px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.datas-box-2 {
+    margin-top: 0px;
+    padding: 10px;
+    width: 420px;
     height: 320px;
-    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.opts{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 13px;
+    width: 700px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opts .opts-2{
+    margin-left: 10px;
+    padding: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 60px;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+  /* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+  
+  /* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+  /* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: rgba(0, 0, 0, 0.397);
+}
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 5px;
+    left: 4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
 }
